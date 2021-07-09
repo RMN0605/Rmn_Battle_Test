@@ -70,7 +70,7 @@ public class Reflect : MonoBehaviour
                     var q = Quaternion.Euler(0, 0, -Mathf.Atan2(s_Manager.distance.x, s_Manager.distance.y)
                                                                * Mathf.Rad2Deg + (-45 + (bullet_counter * 45)));    //それぞれの角度にするよ
                     var t = Instantiate(s_Manager.BulletList[3], transform.position, q);   //代入するよ
-                    t.transform.parent = s_Manager.prefab.transform;    //プレハブをここを親にして出すよ
+                    t.transform.SetParent(s_Manager.prefab.transform);    //プレハブをここを親にして出すよ
                     vec.Normalize();    //１に正規化するよ
                     t.GetComponent<Rigidbody2D>().velocity = vec;
                 }

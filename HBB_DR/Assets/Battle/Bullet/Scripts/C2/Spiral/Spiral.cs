@@ -62,7 +62,7 @@ public class Spiral : MonoBehaviour
                     {
                         var a = Quaternion.Euler(0, 0, -Mathf.Atan2(Vec.x, Vec.y) * Mathf.Rad2Deg + (bullet_counter * 120));    //３方向のspralなので１２０度ごとに出すよ
                         var b = Instantiate(s_Manager.BulletList[1], transform.position, a);
-                        b.transform.parent = s_Manager.prefab.transform;    //プレハブをここを親にして出すよ
+                        b.transform.SetParent(s_Manager.prefab.transform);    //プレハブをここを親にして出すよ
                         b.GetComponent<Rigidbody2D>().velocity = Vec;
                     }
                 }

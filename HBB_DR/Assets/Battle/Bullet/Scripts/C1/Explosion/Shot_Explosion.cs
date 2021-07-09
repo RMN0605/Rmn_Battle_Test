@@ -26,6 +26,7 @@ public class Shot_Explosion : Shot_Common
 
     void Start()
     {
+
         //’†‰›‚ÌˆÊ’u‚ğ’²‚×‚é‚æ
         #region ‘ÎÛİ’è
         if (this.gameObject.CompareTag("Bullet_1"))

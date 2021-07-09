@@ -39,7 +39,7 @@ public class Homing : MonoBehaviour
             if ((cooltime_count > cooltime))
             {
                 GameObject Shot = Instantiate(s_Manager.BulletList[2]);
-                Shot.transform.parent = s_Manager.prefab.transform;    //プレハブをここを親にして出すよ
+                Shot.transform.SetParent(s_Manager.prefab.transform);    //プレハブをここを親にして出すよ
                 Shot.transform.position = this.transform.position;
                 //初期化
                 cooltime_count = 0;
