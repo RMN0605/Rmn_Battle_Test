@@ -138,7 +138,7 @@ public class Way : MonoBehaviour
         }
         #endregion
         var t = Instantiate(s_Manager.BulletList[0], transform.position, q);   //一つにまとめたら！
-        t.transform.parent = s_Manager.prefab.transform;    //プレハブをここを親にして出すよ
+        t.transform.SetParent(s_Manager.prefab.transform);    //プレハブをここを親にして出すよ
         t.GetComponent<Rigidbody2D>().velocity = vec;   //発射！
     }
 }

@@ -41,7 +41,7 @@ public class Random_Homing : MonoBehaviour
                 for (int i = 0; i < 2; i++)
                 {
                     GameObject Shot = Instantiate(s_Manager.BulletList[5]);
-                    Shot.transform.parent = s_Manager.prefab.transform;    //プレハブをここを親にして出すよ
+                    Shot.transform.SetParent(s_Manager.prefab.transform);    //プレハブをここを親にして出すよ
                     Shot.transform.position = this.transform.position;
                 }
             }

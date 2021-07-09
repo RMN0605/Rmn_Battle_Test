@@ -69,10 +69,10 @@ public class Cross : MonoBehaviour
                         }
                         #endregion
                         s_Manager.BulletList[7].GetComponent<Shot_Cross>().is_direction = rotation;
-                        GameObject Shot7 = Instantiate(s_Manager.BulletList[7]) as GameObject;
-                        Shot7.transform.parent = s_Manager.prefab.transform;    //プレハブをここを親にして出すよ
-                        Shot7.transform.rotation = Quaternion.Euler(Angle);
-                        Shot7.transform.position = this.transform.position;
+                        GameObject Shot = Instantiate(s_Manager.BulletList[7]) as GameObject;
+                        Shot.transform.SetParent(s_Manager.prefab.transform);    //プレハブをここを親にして出すよ
+                        Shot.transform.rotation = Quaternion.Euler(Angle);
+                        Shot.transform.position = this.transform.position;
                     }
                 }
             }

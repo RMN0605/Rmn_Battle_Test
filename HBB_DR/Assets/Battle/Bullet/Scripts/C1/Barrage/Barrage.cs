@@ -65,7 +65,7 @@ public class Barrage : MonoBehaviour
                 vec *= bullet_speed;
                 var q = Quaternion.Euler(0, 0, -Mathf.Atan2(s_Manager.distance.x + Random.Range(-400f, 400f), s_Manager.distance.y + Random.Range(-40f, 40f)) * Mathf.Rad2Deg);
                 var t = Instantiate(s_Manager.BulletList[4], transform.position, q);
-                t.transform.parent = s_Manager.prefab.transform;    //プレハブをここを親にして出すよ
+                t.transform.SetParent(s_Manager.prefab.transform);    //プレハブをここを親にして出すよ
                 t.GetComponent<Rigidbody2D>().velocity = vec;
                 #endregion
             }

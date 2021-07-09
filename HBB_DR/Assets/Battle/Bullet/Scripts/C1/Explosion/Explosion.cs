@@ -50,7 +50,7 @@ public class Explosion : MonoBehaviour
             if (cooltime_count == 0)
             {
                 GameObject Shot = Instantiate(s_Manager.BulletList[6]);
-                Shot.transform.parent = s_Manager.prefab.transform;    //プレハブをここを親にして出すよ
+                Shot.transform.SetParent(s_Manager.prefab.transform);    //プレハブをここを親にして出すよ
                 Shot.transform.position = this.transform.position;
             }
         }
